@@ -103,6 +103,7 @@ export default function HomePage() {
               reflection={savedText}
               initialGrade={formState.grade}
               onSuccess={() => setDone(true)}
+              onBack={() => setStep(2)}
             />
           )}
         </div>

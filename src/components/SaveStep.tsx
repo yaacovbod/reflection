@@ -8,9 +8,10 @@ interface Props {
   reflection: string
   initialGrade: string
   onSuccess: () => void
+  onBack: () => void
 }
 
-export default function SaveStep({ reflection, initialGrade, onSuccess }: Props) {
+export default function SaveStep({ reflection, initialGrade, onSuccess, onBack }: Props) {
   const validInitial = (GRADES as readonly string[]).includes(initialGrade) ? (initialGrade as Grade) : GRADES[0]
   const [name, setName] = useState('')
   const [grade, setGrade] = useState<Grade>(validInitial)
@@ -94,12 +95,21 @@ export default function SaveStep({ reflection, initialGrade, onSuccess }: Props)
       {loading ? (
         <div className="flex justify-center py-2"><Spinner /></div>
       ) : (
-        <button
-          type="submit"
-          className="w-full bg-accent text-white font-bold rounded-xl py-3 min-h-[44px] hover:bg-cyan-700 transition-colors"
-        >
-          שמור ושלח למחנכ/ת
-        </button>
+        <div className="flex flex-col gap-3">
+          <button
+            type="submit"
+            className="w-full bg-accent text-white font-bold rounded-xl py-3 min-h-[44px] hover:bg-cyan-700 transition-colors"
+          >
+            שמור ושלח למחנכ/ת
+          </button>
+          <button
+            type="button"
+            onClick={onBack}
+            className="w-full border border-gray-300 text-gray-600 font-medium rounded-xl py-3 min-h-[44px] hover:bg-gray-50 transition-colors text-sm"
+          >
+            חזור לעריכת הרפלקציה
+          </button>
+        </div>
       )}
     </form>
   )
