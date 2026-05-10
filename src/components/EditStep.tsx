@@ -50,26 +50,13 @@ export default function EditStep({ initialText, gender, grade, answers, onConfir
 
       {error && <p className="text-red-600 text-sm bg-red-50 rounded-lg px-3 py-2">{error}</p>}
 
-      <div className="flex flex-col gap-3 sm:flex-row-reverse">
-        <button
-          onClick={() => onConfirm(text)}
-          disabled={!text.trim()}
-          className="flex-1 bg-accent text-white font-bold rounded-xl py-3 min-h-[44px] hover:bg-cyan-700 transition-colors disabled:opacity-50"
-        >
-          אישור והמשך
-        </button>
-
-        {regenerating ? (
-          <div className="flex-1 flex justify-center items-center"><Spinner /></div>
-        ) : (
-          <button
-            onClick={handleRegenerate}
-            className="flex-1 border border-accent text-accent font-semibold rounded-xl py-3 min-h-[44px] hover:bg-accent-light transition-colors"
-          >
-            צור מחדש
-          </button>
-        )}
-      </div>
+      <button
+        onClick={() => onConfirm(text)}
+        disabled={!text.trim()}
+        className="w-full bg-accent text-white font-bold rounded-xl py-3 min-h-[44px] hover:bg-cyan-700 transition-colors disabled:opacity-50"
+      >
+        אישור והמשך
+      </button>
     </div>
   )
 }
