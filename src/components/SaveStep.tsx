@@ -98,7 +98,7 @@ export default function SaveStep({ reflection, initialGrade, onSuccess }: Props)
           type="submit"
           className="w-full bg-accent text-white font-bold rounded-xl py-3 min-h-[44px] hover:bg-cyan-700 transition-colors"
         >
-          שמור ושדר למחנך
+          שמור ושלח למחנכ/ת
         </button>
       )}
     </form>

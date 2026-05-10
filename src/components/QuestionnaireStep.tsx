@@ -33,7 +33,7 @@ const QUESTIONS: { key: keyof Answers; label: string; hint: string }[] = [
   },
   {
     key: 'goal',
-    label: 'יעד אופרטיבי',
+    label: 'יעד להמשך',
     hint: 'מהו היעד המעשי המרכזי שאתה מציב לעצמך לשנה הבאה כדי להתקדם?',
   },
 ]
