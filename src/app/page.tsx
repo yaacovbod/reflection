@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import QuestionnaireStep from '@/components/QuestionnaireStep'
 import EditStep from '@/components/EditStep'
 import SaveStep from '@/components/SaveStep'
@@ -57,11 +56,8 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen p-4 sm:p-6 relative">
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0">
-        <Image src="/neimat.png" alt="" width={400} height={400} className="opacity-50 select-none" />
-      </div>
-      <div className="max-w-lg mx-auto relative z-10">
+    <main className="min-h-screen p-4 sm:p-6">
+      <div className="max-w-lg mx-auto">
         <header className="text-center mb-6">
 <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">רפלקציה אישית לתעודה</h1>
           <p className="text-sm text-gray-500 mt-1">ספר על השנה שלך וה-AI יעצב את הרפלקציה</p>
