@@ -28,7 +28,7 @@ const QUESTIONS: { key: keyof Answers; label: string; hint: string }[] = [
   },
   {
     key: 'conduct',
-    label: 'התנהלות ומשמעת',
+    label: 'הרגלים ואחריות',
     hint: 'איזה הרגל אישי (עמידה בזמנים, סדר, כללי בית ספר) שיפרת השנה וכיצד זה עזר לך?',
   },
   {
